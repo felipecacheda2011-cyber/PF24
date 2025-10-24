@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartas Aeronáuticas - PF24</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #1b263b, #0d1b2a);
+      color: #e0e1dd;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 60px;
+      font-size: 2.5em;
+      letter-spacing: 1px;
+    }
+    p {
+      font-size: 1.1em;
+      color: #a9b4c2;
+    }
+    select {
+      margin-top: 20px;
+      font-size: 1.1em;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background-color: #415a77;
+      color: #fff;
+      outline: none;
+    }
+    select:hover {
+      background-color: #527396;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      border: none;
+      background-color: #778da9;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #9bb1d1;
+    }
+    footer {
+      margin-top: 80px;
+      font-size: 0.9em;
+      color: #8e9ba8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cartas Aeronáuticas - PF24</h1>
+  <p>Seleccioná un aeropuerto para ver sus cartas:</p>
+
+  <select id="aeropuerto">
+    <option value="">-- Elegí un aeropuerto --</option>
+    <option value="https://skyvector.com/airport/MDPC/Punta-Cana-International-Airport">MDPC - Punta Cana Intl</option>
+    <option value="https://skyvector.com/airport/GCLP/Gran-Canaria-Airport">GCLP - Gran Canaria</option>
+    <option value="https://skyvector.com/airport/EGKK/London-Gatwick-Airport">EGKK - London Gatwick</option>
+    <option value="https://skyvector.com/airport/LCLK/Larnaca-Intl-Airport">LCLK - Larnaca</option>
+    <option value="https://skyvector.com/airport/LCPH/Paphos-Intl-Airport">LCPH - Paphos</option>
+    <option value="https://skyvector.com/airport/LEMH/Mahon-Menorca-Airport">LEMH - Menorca</option>
+    <option value="https://skyvector.com/airport/EKFT/Faaborg-Airfield">EKFT - Faaborg</option>
+    <option value="https://skyvector.com/airport/EGHI/Southampton-Airport">EGHI - Southampton</option>
+    <option value="https://skyvector.com/airport/MDAB/Arroyo-Barril-Airport">MDAB - Arroyo Barril</option>
+    <option value="https://skyvector.com/airport/MDST/Cibao-Intl-Airport">MDST - Santiago</option>
+    <option value="https://skyvector.com/airport/MTCA/Cap-Haitien-Intl-Airport">MTCA - Cap Haitien</option>
+    <option value="https://skyvector.com/airport/MDCR/Cristo-Rey-Airstrip">MDCR - Cristo Rey</option>
+    <option value="https://skyvector.com/airport/LCRA/Akrotiri-Royal-Air-Force-Base">LCRA - Akrotiri RAF</option>
+  </select>
+
+  <br>
+  <button onclick="abrirCartas()">Ver cartas</button>
+
+  <footer>
+    <p>© 2025 PF24 | Datos obtenidos de SkyVector</p>
+  </footer>
+
+  <script>
+    function abrirCartas() {
+      const url = document.getElementById("aeropuerto").value;
+      if (url) {
+        window.open(url, "_blank");
+      } else {
+        alert("Por favor seleccioná un aeropuerto.");
+      }
+    }
+  </script>
+</body>
+</html>
